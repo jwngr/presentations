@@ -1,0 +1,9 @@
+{
+  "firebase": "ga-intro-to-firebase",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
