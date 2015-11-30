@@ -1,11 +1,6 @@
 # GDG Global Summit Presentation (May 27, 2015)
 
 
-### Video
-
-Coming soon!
-
-
 ### Slides
 
 The slides from my presentation can be found [here](https://gdg-summit-slides.firebaseapp.com).
