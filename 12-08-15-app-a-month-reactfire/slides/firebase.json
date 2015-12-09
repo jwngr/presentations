@@ -1,5 +1,5 @@
 {
-  "firebase": "ga-intro-slides",
+  "firebase": "app-a-month-dec",
   "public": ".",
   "ignore": [
     "firebase.json",
