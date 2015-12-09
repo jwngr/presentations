@@ -1,11 +1,6 @@
 # Dev Bootcamp SF Presentation (October 8, 2015)
 
 
-### Video
-
-Coming soon!
-
-
 ### Slides
 
 The slides from my presentation can be found [here](https://dev-bootcamp-sf-slides.firebaseapp.com).
