@@ -1,4 +1,4 @@
-# "The 🔑 to Firebase 🔒" | Google I/O 2016 (May 19, 2016)
+# The 🔑 to Firebase 🔒 | Google I/O 2016 (May 19, 2016)
 
 
 ### Video
