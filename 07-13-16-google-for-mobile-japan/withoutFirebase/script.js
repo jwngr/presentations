@@ -7,10 +7,10 @@ $(document).ready(function() {
   var $submitButton = $("#submitButton");
 
   // Adds a new message to the message list
-  function addMessageToHtml(username, text, downloadURL) {
+  function addMessageToHtml(username, text, imageURL) {
     var el;
-    if (downloadURL) {
-      el = $("<li class='list-group-item'><b>" + username + ":</b> " + text + "<img src='" + downloadURL + "' /></li>")
+    if (imageURL) {
+      el = $("<li class='list-group-item'><b>" + username + ":</b> " + text + "<img src='" + imageURL + "' /></li>")
     } else {
       el = $("<li class='list-group-item'><b>" + username + ":</b> " + text + "</li>")
     }
