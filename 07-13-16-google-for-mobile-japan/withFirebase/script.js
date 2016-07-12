@@ -20,7 +20,7 @@ $(document).ready(function() {
   var $submitButton = $("#submitButton");
 
   // Adds a new message to the message list
-  function addMessageToDom(username, text, downloadURL) {
+  function addMessageToHtml(username, text, downloadURL) {
     var el;
     if (downloadURL) {
       el = $("<li class='list-group-item'><b>" + username + ":</b> " + text + "<img src='" + downloadURL + "' /></li>")
@@ -36,7 +36,7 @@ $(document).ready(function() {
     newMessageRef.set({
       username: username,
       text: text,
-      downloadURL: downloadURL
+      downloadURL: downloadURL || null
     }).then(function() {
       // Reset new message input
       $newMessageInput.val("");
@@ -48,21 +48,16 @@ $(document).ready(function() {
   // Loop through the last ten messages stored in Firebase
   databaseRef.limitToLast(10).on("child_added", function(snapshot) {
     var message = snapshot.val();
-
-    // Escape unsafe characters
-    var username = message.username.replace(/\</g, "&lt;").replace(/\>/g, "&gt;");
-    var text = message.text.replace(/\</g, "&lt;").replace(/\>/g, "&gt;");
-
-    addMessageToDom(username, text, message.downloadURL);
+    addMessageToHtml(message.username, message.text, message.downloadURL);
   });
 
   // Listen for key presses on the new message input
   $submitButton.click(function() {
-    var username = $usernameInput.val();
+    var username = $usernameInput.val().trim();
     var newMessage = $newMessageInput.val().trim();
     var newFile = $newFileInput.prop("files")[0];
 
-    if (username.length && newMessage.length) {
+    if (username && newMessage) {
       var newMessageRef = databaseRef.push();
 
       if (newFile) {

@@ -7,7 +7,7 @@ $(document).ready(function() {
   var $submitButton = $("#submitButton");
 
   // Adds a new message to the message list
-  function addMessageToDom(username, text, downloadURL) {
+  function addMessageToHtml(username, text, downloadURL) {
     var el;
     if (downloadURL) {
       el = $("<li class='list-group-item'><b>" + username + ":</b> " + text + "<img src='" + downloadURL + "' /></li>")
@@ -20,11 +20,15 @@ $(document).ready(function() {
 
   // Listen for key presses on the new message input
   $submitButton.click(function() {
-    var username = $usernameInput.val();
+    var username = $usernameInput.val().trim();
     var newMessage = $newMessageInput.val().trim();
+    var newFile = $newFileInput.prop("files")[0];
 
-    if (username.length && newMessage.length) {
-      addMessageToDom(username, newMessage);
+    if (username && newMessage) {
+      addMessageToHtml(username, newMessage);
+
+      // Reset new message input
+      $newMessageInput.val("");
     }
   });
 });

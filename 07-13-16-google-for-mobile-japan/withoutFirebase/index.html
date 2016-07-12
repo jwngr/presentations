@@ -6,9 +6,6 @@
 
     <title>火チャット！！</title>
 
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/staging/3.1.0/firebase.js"></script>
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 
@@ -41,6 +38,10 @@
                 <label>Message</label>
                 <input id="newMessage" type="text" placeholder="Type a message..." />
 
+                <!-- Upload file input -->
+                <label>File</label>
+                <input id="newFile" type="file" />
+
                 <!-- Submit button -->
                 <input id="submitButton" type="submit" />
               </div>
@@ -52,15 +53,6 @@
             <div class="panel-heading">Messages</div>
             <div class="panel-body">
               <div id="messageList" class="list-group">
-                <li class="list-group-item">
-                  <b>Jacob:</b> How is the Tokyo trip so far?
-                </li>
-                <li class="list-group-item">
-                  <b>Mike:</b> Awesome! The ramen is delicious!
-                </li>
-                <li class="list-group-item">
-                  <b>Mike:</b> And the views are hard to beat...
-                </li>
               </div>
             </div>
           </div>
