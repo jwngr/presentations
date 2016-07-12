@@ -61,15 +61,11 @@ $(document).ready(function() {
       var newMessageRef = databaseRef.push();
 
       if (newFile) {
-        var uploadTask = storageRef.child(newMessageRef.key).put(newFile);
-
-        uploadTask.on("state_changed", function() {
-          // Observe state change events such as progress, pause, and resume
-        }, function(error) {
-          console.log("Error uploading new file to Firebase Storage:", error);
-        }, function() {
-          var downloadURL = uploadTask.snapshot.downloadURL;
+        storageRef.child(newMessageRef.key).put(newFile).then(function(snapshot) {
+          var downloadURL = snapshot.downloadURL;
           addMessageToFirebaseDatabase(newMessageRef, username, newMessage, downloadURL);
+        }).catch(function(error) {
+          console.log("Error uploading new file to Firebase Storage:", error);
         });
       } else {
         addMessageToFirebaseDatabase(newMessageRef, username, newMessage);
