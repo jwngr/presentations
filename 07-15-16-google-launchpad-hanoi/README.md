@@ -3,7 +3,7 @@
 
 ### Demo
 
-The chat app Mike and I built live during the presentation can be found [here](https://gfm-chat.firebaseapp.com/).
+The chat app Mike and I built live during the presentation can be found [here](https://launchpad-hanoi.firebaseapp.com/).
 
 
 ### Code
