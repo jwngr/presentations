@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>火チャット！！</title>
+    <title>Firechat!</title>
 
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/staging/3.2.0/firebase.js"></script>
@@ -24,7 +24,7 @@
 
   <body>
     <div class="container">
-      <h1>火チャット！！</h1>
+      <h1>Firechat!</h1>
 
       <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
@@ -33,9 +33,16 @@
             <div class="panel-heading">New Message</div>
             <div class="panel-body">
               <div id="newMessageInputs" class="input-group">
-                <!-- Username input -->
-                <label>Username</label>
-                <input id="username" type="text" placeholder="Username" />
+                <!-- Login button -->
+                <button id="loginButton">Login With GitHub</button>
+
+                <!-- Logout button -->
+                <button id="logoutButton">Logout</button>
+
+                <!-- Name input -->
+                <label>Name</label>
+                <!-- <input id="name" type="text" placeholder="Name" /> -->
+                <p id="loggedInName">Loading...</p>
 
                 <!-- New message input -->
                 <label>Message</label>

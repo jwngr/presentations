@@ -12,6 +12,11 @@ h1 {
   text-align: center;
 }
 
+#loginButton, #logoutButton {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 #submitButton {
   display: block;
   margin: auto;
