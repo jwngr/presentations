@@ -1,0 +1,9 @@
+{
+  "firebase": "dev-bootcamp-sf-slides",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
